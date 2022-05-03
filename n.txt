@@ -1,0 +1,11 @@
+-> ClasseA
+	-> ClasseB
+		-> Classe C
+			-> ClasseD
+
+
+Assim se eu uso a classe D em Chain Of Responsability, eu não preciso saber quem me responderá, pode ser inclusive a classe A, mesmo eu não tendo acesso a ela, por meio do COR, consigo ter meu "pedido" "atendido".
+
+client -> ClasseD::handle() -> ClasseC::handle() -> ClasseB::handle() -> ClasseA::handle() Fim.
+
+O cliente obtém a resposta direto da classe A sem nem saber da existência dela.
